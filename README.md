@@ -34,7 +34,13 @@ Open the repo in your IDE (e.g., VS Code) and open `OIDC_Transformations_via_Pyt
 
 > **Note:** You may need to select the uv virtual environment (`.venv`) as your kernel.
 
-The notebook logs in interactively through your browser. You also need the client secret from the course lesson (`CLIENT_SECRET`), which Transformations use to run with their own OIDC credentials.
+The notebook logs in interactively through your browser. You also need the client secret from the course lesson, which Transformations use to run with their own OIDC credentials. Create a `.env` file in the repository root (it is git-ignored, so it never gets committed) and add it there:
+
+```
+CLIENT_SECRET=<the secret from the course lesson>
+```
+
+The notebook loads it with `python-dotenv`.
 
 #### Note: MSAL is no longer installed explicitly
 
